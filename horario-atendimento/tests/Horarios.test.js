@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import Horarios from '../src/Horarios';
 import mockJsonParser, { parse } from '../mocks/jsonParserMock';
 
