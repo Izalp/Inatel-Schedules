@@ -1,5 +1,10 @@
-export const testEnvironment = 'node';
-export const collectCoverage = true;
-export const coverageDirectory = 'coverage';
-export const coverageProvider = 'v8';
-export const testPathIgnorePatterns = ['/node_modules/'];
+module.exports = {
+    testEnvironment: 'node',
+    transform: {
+        "^.+\\.(js|ts)$": "babel-jest"
+    },
+    collectCoverage: true,
+    coverageDirectory: 'coverage',
+    coverageProvider: 'v8',
+    testPathIgnorePatterns: ['/node_modules/'],
+};
