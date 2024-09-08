@@ -27,8 +27,9 @@ class Horarios {
 
             // Calcula o prédio com base na sala
             this.predio = this.definePredio(this.sala);
-        } catch (e) {
-            throw e;
+        } catch (error) {
+            console.log('Erro ao processar JSON:', error);
+            throw error;
         }
     }
 
@@ -53,4 +54,4 @@ class Horarios {
     }
 }
 
-module.exports = Horarios;
+export default Horarios;
