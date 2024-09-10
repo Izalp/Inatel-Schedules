@@ -34,19 +34,13 @@ class Horarios {
     }
 
     definePredio(sala) {
-        if (sala >= 1 && sala <= 5) {
-            return 1;
-        } else if (sala >= 6 && sala <= 10) {
-            return 2;
-        } else if (sala >= 11 && sala <= 15) {
-            return 3;
-        } else if (sala >= 16 && sala <= 20) {
-            return 4;
-        } else if (sala >= 21 && sala <= 25) {
-            return 6;
-        } else {
-            throw new Error('Número da sala inválido')
-        }
+        if (sala >= 1 && sala <= 5) return 1;
+        if (sala >= 6 && sala <= 10) return 2;
+        if (sala >= 11 && sala <= 15) return 3;
+        if (sala >= 16 && sala <= 20) return 4;
+        if (sala >= 21 && sala <= 25) return 6;
+
+        throw new Error('Número da sala inválido');
     }
 
     getPredio() {
