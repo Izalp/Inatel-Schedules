@@ -15,6 +15,13 @@ class Horarios {
                 throw new Error('JSON inválido ou dados ausentes');
             }
 
+            // Verifica se há campos adicionais
+            const allowedFields = ['nomeDoProfessor', 'horarioDeAtendimento', 'periodo', 'sala'];
+            const extraFields = Object.keys(data).filter(key => !allowedFields.includes(key));
+            if (extraFields.length > 0) {
+                throw new Error('JSON inválido');
+            }
+
             // Valida o número da sala
             if (typeof data.sala !== 'number' || data.sala < 1 || data.sala > 25) {
                 throw new Error('Número da sala inválido');
@@ -39,8 +46,6 @@ class Horarios {
         if (sala >= 11 && sala <= 15) return 3;
         if (sala >= 16 && sala <= 20) return 4;
         if (sala >= 21 && sala <= 25) return 6;
-
-        throw new Error('Número da sala inválido');
     }
 
     getPredio() {
