@@ -7,7 +7,7 @@ Repositório para registro do exercício desenvolvido na disciplina C214 no Inst
 
 ## 🕗 Inatel-Schedules
 
-O projeto implementa a classe **`Horarios`** é responsável por processar dados JSON referentes aos horários de atendimento dos professores do Inatel. 
+O projeto implementa a classe **`Horarios`** é responsável por processar dados JSON referentes aos horários de atendimento dos professores do Inatel.
 Ela utiliza um serviço de parsing injetado para converter o JSON de entrada em um objeto JavaScript, validando a presença e o formato corretos dos campos necessários.
 
 ## 🔍 Funcionalidades
@@ -54,22 +54,22 @@ Isso executará os testes definidos e coletará a cobertura de código.
 
 ### 🔄 Injeção de Dependência
 
-A classe `Horarios` utiliza um padrão de injeção de dependência para o serviço de parsing JSON (`jsonParser`). 
+A classe **`Horarios`** utiliza um padrão de injeção de dependência para o serviço de parsing JSON (`jsonParser`).
 Esse padrão permite que a classe seja testada de forma isolada, substituindo o serviço de parsing real por um mock durante os testes.
 
 ### 🤖 Mock Automático
 
-Para garantir que os testes da classe `Horarios` sejam independentes e não dependam do código real do parser JSON, um mock automático é utilizado. 
+Para garantir que os testes da classe **`Horarios`** sejam independentes e não dependam do código real do parser JSON, um mock automático é utilizado.
 O mock substitui o parser real e permite definir comportamentos esperados para a função de parsing, além de verificar se o método foi chamado com os parâmetros corretos.
 
 ### ⚠️ Tratamento de Exceções
 
-A classe `Horarios` possui várias validações para garantir que os dados JSON fornecidos estejam corretos. 
-Se os dados não estiverem conforme o esperado, a classe lança erros com mensagens específicas. 
+A classe **`Horarios`** possui várias validações para garantir que os dados JSON fornecidos estejam corretos.
+Se os dados não estiverem conforme o esperado, a classe lança erros com mensagens específicas.
 
 ### 🛡️ Validação de Dados
 
-A validação de dados inclui a verificação dos campos obrigatórios e a validação do número da sala. 
+A validação de dados inclui a verificação dos campos obrigatórios e a validação do número da sala.
 Campos obrigatórios são verificados para garantir que não estejam ausentes, e o número da sala é validado para garantir que esteja dentro do intervalo permitido (1 a 25).
 
 ## 🧩 Suíte de Testes - Casos de Sucesso e Falha
@@ -99,5 +99,3 @@ Campos obrigatórios são verificados para garantir que não estejam ausentes, e
 - JSON não tiver campo "sala"
 - JSON tiver campo adicional
 - O campo "sala" estiver vazio
-
-
