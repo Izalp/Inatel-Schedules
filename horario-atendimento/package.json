@@ -1,7 +1,7 @@
 {
   "name": "horario-atendimento",
   "version": "1.0.0",
-  "description": "Projeto para testar a classe HorarioAtendimento usando Jest e mocks.",
+  "description": "Projeto para testar a classe Horarios usando Jest e mocks.",
   "main": "src/HorarioAtendimento.js",
   "scripts": {
     "start": "npm run test",
@@ -14,7 +14,7 @@
   },
   "keywords": [],
   "author": "Iza Lopes",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@babel/preset-env": "^7.25.4",
