@@ -20,6 +20,10 @@ jobs:
         run: npm install
         working-directory: horario-atendimento
 
+      - name: Clear Jest cache
+        run: npm test -- --clearCache
+        working-directory: horario-atendimento
+
       - name: Run unit tests
         run: npm run test
         working-directory: horario-atendimento
@@ -29,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: test-results
-          path: coverage
+          path: horario-atendimento/coverage
